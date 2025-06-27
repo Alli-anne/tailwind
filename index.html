@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <title>Tailwind Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" >
+    </head>
+    <body class="min-h-screen">
+    <!-- This is a section from the National Parks Foundation website https://www.nationalparks.org -->
+    <!-- Inside this section we need the following behavior:
+    use the theme serif font, be relative, padding of 8vw on the top and 24vw on the bottom, margin x auto
+    on light theme: gray-100 background
+    dark theme: gray-700 background, white text.  -->
+    <section class=" grid lg:grid-cols-3 md:grid-cols-1 text-center">
+      <!-- This is a container for the top part of the section...everything but the image. It should be relative and have a z-index set to 10, center all the text in it-->
+      <div class="relative z-10 m-6">
+        <!-- This is a container for the top headline and paragraph.
+        Restrict it's width to about 768px, center it and add padding -->
+        <div class="mb-3">
+          <h2 class="font-serif mx-auto text-center text-3xl col-span-2 p-4">Turning Passion for Our Parks into Action</h2>
+          <p>
+            Thanks to the generosity of our donors, NPF has accomplished a lot
+            of good in the parks. However, there’s still work to be done.
+          </p>
+        </div>
+        <!-- This list should flex, allow wrapping, justify-center, have a max width of about 1024px, and be centered -->
+        <ul class="flex flex-col md:w-1/2 lg:w-1/3 text-center">
+          <!-- Each item in the list should be full width on small screens, 1/2 width on medium, and 1/3 on xtra large add padding as well -->
+          <li class=" ">
+            <article>
+              <!-- This paragraph should be 6xl until xl...then 8xl -->
+              <!-- The svg should align top, be 1.5rem wide, inline, and have it's margin adjusted to be in the right spot -->
+              <p class="text-6xl md:text-8xl sans-serif text-center font-serif ">
+                400<svg
+                  class="w-4 inline -mt-15"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  data-icon="plus"
+                >
+                  <path
+                    d="M3 12.5a1.19 1.19 0 0 0 1.19 1.19h6.92a.2.2 0 0 1 .2.2v6.92a1.19 1.19 0 0 0 2.38 0V13.9a.2.2 0 0 1 .2-.2h6.92a1.19 1.19 0 0 0 0-2.38H13.9a.2.2 0 0 1-.2-.2V4.2a1.19 1.19 0 1 0-2.38 0v6.92a.2.2 0 0 1-.2.2H4.2A1.19 1.19 0 0 0 3 12.5Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </p>
+              <!-- This paragraph should use the theme sans-serif font, be uppercase, and be larger -->
+              <p class="text-3xl mb-6">Parks</p>
+              <!-- This paragraph needs margin and padding -->
+              <p class="mb-11">
+                NPF helps support the National Park Service in their
+                preservation of more than 400 national park sites across the
+                country.
+              </p>
+            </article>
+          </li>
+          <li class="mb-11">
+  <article>
+    <p class="text-6xl md:text-8xl font-serif inline-flex items-start ">
+      50
+      <svg
+        class="w-4 inline mb-6"
+        viewBox="0 0 25 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        data-icon="plus"
+      >
+        <path
+          d="M3 12.5a1.19 1.19 0 0 0 1.19 1.19h6.92a.2.2 0 0 1 .2.2v6.92a1.19 1.19 0 0 0 2.38 0V13.9a.2.2 0 0 1 .2-.2h6.92a1.19 1.19 0 0 0 0-2.38H13.9a.2.2 0 0 1-.2-.2V4.2a1.19 1.19 0 1 0-2.38 0v6.92a.2.2 0 0 1-.2.2H4.2A1.19 1.19 0 0 0 3 12.5Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </p>
+    <p class="text-3xl mb-6 font-sans uppercase">Years</p>
+    <p>
+      Since 1967, the NPF has helped protect and preserve some of
+      America's most treasured places.
+    </p>
+  </article>
+</li>
+
+<li class="mb-1">
+  <article>
+    <p class="text-6xl md:text-8xl font-serif inline-flex items-start">
+      $89.4
+      <svg
+        class="w-4 inline -mt-1 mb-6"
+        viewBox="0 0 25 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        data-icon="plus"
+      >
+        <path
+          d="M3 12.5a1.19 1.19 0 0 0 1.19 1.19h6.92a.2.2 0 0 1 .2.2v6.92a1.19 1.19 0 0 0 2.38 0V13.9a.2.2 0 0 1 .2-.2h6.92a1.19 1.19 0 0 0 0-2.38H13.9a.2.2 0 0 1-.2-.2V4.2a1.19 1.19 0 1 0-2.38 0v6.92a.2.2 0 0 1-.2.2H4.2A1.19 1.19 0 0 0 3 12.5Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </p>
+    <p class="text-3xl mb-6 font-sans uppercase">Million</p>
+    <p>
+      NPF provided grants and programmatic support of over $89.4M to
+      our national parks during fiscal year 2021.
+    </p>
+  </article>
+</li>
+        </ul>
+      </div>
+      <!-- Container for the image that should be positioned absolute at the bottom:0 left:0 of the section. It should be full width -->
+<!-- Container for the image -->
+<div class="absolute bottom-0 left-0 w-full h-64 md:h-96 lg:h-[24rem]">
+  <picture>
+    <source
+      srcset="
+        https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=354&amp;q=80&amp;w=750   750w,
+        https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=449&amp;q=80&amp;w=950   950w,
+        https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=543&amp;q=80&amp;w=1150 1150w,
+        https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=638&amp;q=80&amp;w=1350 1350w,
+        https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=732&amp;q=80&amp;w=1550 1550w,
+        https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=756&amp;q=80&amp;w=1600 1600w
+      "
+    />
+    <img
+      class="w-full h-full object-cover"
+      src="https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=756&amp;q=80&amp;w=1600"
+      alt=""
+      loading="lazy"
+      style="aspect-ratio: 1600 / 756"
+    />
+  </picture>
+
+  <!-- Gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent dark:from-gray-700"></div>
+
+
+    </section>
+  </body>
+</html>
