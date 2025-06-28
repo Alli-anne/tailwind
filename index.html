@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css" >
     </head>
-    <body class="min-h-screen">
+    <body class="min-h-screen bg-stone-100">
     <!-- This is a section from the National Parks Foundation website https://www.nationalparks.org -->
     <!-- Inside this section we need the following behavior:
     use the theme serif font, be relative, padding of 8vw on the top and 24vw on the bottom, margin x auto
     on light theme: gray-100 background
     dark theme: gray-700 background, white text.  -->
-    <section class=" grid lg:grid-cols-3 md:grid-cols-1 text-center">
+    <section class=" relative md:grid-cols-1 text-center">
       <!-- This is a container for the top part of the section...everything but the image. It should be relative and have a z-index set to 10, center all the text in it-->
       <div class="relative z-10 m-6">
         <!-- This is a container for the top headline and paragraph.
         Restrict it's width to about 768px, center it and add padding -->
-        <div class="mb-3">
+        <div class="mb-1">
           <h2 class="font-serif mx-auto text-center text-3xl col-span-2 p-4">Turning Passion for Our Parks into Action</h2>
           <p>
             Thanks to the generosity of our donors, NPF has accomplished a lot
@@ -25,13 +25,13 @@
           </p>
         </div>
         <!-- This list should flex, allow wrapping, justify-center, have a max width of about 1024px, and be centered -->
-        <ul class="flex flex-col md:w-1/2 lg:w-1/3 text-center">
+        <ul class="flex flex-col md:flex-row  text-center">
           <!-- Each item in the list should be full width on small screens, 1/2 width on medium, and 1/3 on xtra large add padding as well -->
           <li class=" ">
             <article>
               <!-- This paragraph should be 6xl until xl...then 8xl -->
               <!-- The svg should align top, be 1.5rem wide, inline, and have it's margin adjusted to be in the right spot -->
-              <p class="text-6xl md:text-8xl sans-serif text-center font-serif ">
+              <p class="text-6xl  sans-serif text-center font-serif ">
                 400<svg
                   class="w-4 inline -mt-15"
                   viewBox="0 0 25 24"
@@ -49,16 +49,16 @@
               <!-- This paragraph should use the theme sans-serif font, be uppercase, and be larger -->
               <p class="text-3xl mb-6">Parks</p>
               <!-- This paragraph needs margin and padding -->
-              <p class="mb-11">
+              <p class="mb-1">
                 NPF helps support the National Park Service in their
                 preservation of more than 400 national park sites across the
                 country.
               </p>
             </article>
           </li>
-          <li class="mb-11">
+          <li class="mb-1">
   <article>
-    <p class="text-6xl md:text-8xl font-serif inline-flex items-start ">
+    <p class="text-6xl font-serif inline-flex items-start ">
       50
       <svg
         class="w-4 inline mb-6"
@@ -82,9 +82,9 @@
   </article>
 </li>
 
-<li class="mb-1">
+<li class="mb-1 pb-90">
   <article>
-    <p class="text-6xl md:text-8xl font-serif inline-flex items-start">
+    <p class="text-6xl  font-serif inline-flex items-start">
       $89.4
       <svg
         class="w-4 inline -mt-1 mb-6"
@@ -100,7 +100,7 @@
         ></path>
       </svg>
     </p>
-    <p class="text-3xl mb-6 font-sans uppercase">Million</p>
+    <p class="text-3xl font-sans uppercase ">Million</p>
     <p>
       NPF provided grants and programmatic support of over $89.4M to
       our national parks during fiscal year 2021.
@@ -111,7 +111,7 @@
       </div>
       <!-- Container for the image that should be positioned absolute at the bottom:0 left:0 of the section. It should be full width -->
 <!-- Container for the image -->
-<div class="absolute bottom-0 left-0 w-full h-64 md:h-96 lg:h-[24rem]">
+<div class="absolute inset-0 z-0 ">
   <picture>
     <source
       srcset="
@@ -124,7 +124,7 @@
       "
     />
     <img
-      class="w-full h-full object-cover"
+      class="w-full h-full object-cover object-bottom"
       src="https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=756&amp;q=80&amp;w=1600"
       alt=""
       loading="lazy"
@@ -133,7 +133,7 @@
   </picture>
 
   <!-- Gradient overlay -->
-  <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent dark:from-gray-700"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-white/90 to-white/0 dark:from-gray-700/90 dark:to-gray-700/0"></div>
 
 
     </section>
